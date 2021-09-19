@@ -7,13 +7,12 @@ export default function LoginScreen({setSession}) {
   
   return (
     <>
-      Please log in
       <br />
-      User ID: <input type="text" placeholder="123456" value={userID} onChange={e => setUserID(e.target.value)} />
+      <input type="text" className="loginfield" placeholder="User ID" value={userID} onChange={e => setUserID(e.target.value)} />
       <br />
-      Password: <input type="password" value={password} onChange={e => setPassword(e.target.value)} />
+      <input type="password" className="loginfield" placeholder="Password" value={password} onChange={e => setPassword(e.target.value)} />
       <br />
-      <button onClick={async () => {
+      <button className="loginButton" onClick={async () => {
           const res = await fetch('api/login', {
             method: 'POST',
             headers: {
