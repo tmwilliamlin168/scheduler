@@ -12,7 +12,7 @@ export default function LoginScreen({setSession}) {
       <br />
       <input type="password" className="loginfield" placeholder="Password" value={password} onChange={e => setPassword(e.target.value)} />
       <br />
-      <button className="loginButton" onClick={async () => {
+      <button className="button loginButton" onClick={async () => {
           const res = await fetch('api/login', {
             method: 'POST',
             headers: {
