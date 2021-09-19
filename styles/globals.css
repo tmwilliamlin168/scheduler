@@ -41,6 +41,7 @@ a {
 .loginButton {
   background: white;
   width: 226px;
+  box-shadow: -7px 7px #404040;
 }
 
 .button:hover {
