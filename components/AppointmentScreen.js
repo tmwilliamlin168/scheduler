@@ -39,6 +39,16 @@ export default function AppointmentScreen({userData}) {
                         ))}
                         Birth Date: {userData.birthDate}
                         <br />
+                        Communication: {userData.communication[0].language.text}
+                        <br />
+                        Gender: {userData.gender}
+                        <br />
+                        ID: {userData.id}
+                        <br />
+                        Phone numbers:
+                        {userData.telecom.map((a, _) => (
+                            <p key={_}>{a.value}</p>
+                        ))}
                     </>
                 )
             }
