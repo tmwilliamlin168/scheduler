@@ -1,8 +1,12 @@
+import {useState} from 'react';
+
 const apmtTypes = [{code: 'checkup', email: 'checkup@fhirgure.com'}, {code: 'vision', email: 'vision@fhirgure.com'}, {code: 'dental', email: 'dental@fhirgure.com'}];
 
 const cardStyle = {border: '2px solid', display: 'inline-block', margin: 4, padding: 4 };
 
 export default function AppointmentScreen({userData}) {
+    const [showPersonalInfo, setShowPersonalInfo] = useState(false);
+
     // console.log(userData.apmts.entry.find(a => a.resource.serviceCategory[0].coding[0].code === apmtTypes[0]));
     const bookNow = [];
     const recentAppointments = [];
@@ -26,6 +30,20 @@ export default function AppointmentScreen({userData}) {
     // })
     return (
         <>
+            {
+                showPersonalInfo && (
+                    <>
+                        Addresses:
+                        {userData.address.map((a, _) => (
+                            <p key={_}>{a.line[0]} {a.city} {a.state} {a.country}</p>
+                        ))}
+                        Birth Date: {userData.birthDate}
+                        <br />
+                    </>
+                )
+            }
+            <button onClick={() => setShowPersonalInfo(!showPersonalInfo)}>{showPersonalInfo ? 'Hide' : 'Show'} Personal Information</button>
+            <br />
             { bookNow.length ? (
                 <>
                     <h1>Book Now:</h1>
