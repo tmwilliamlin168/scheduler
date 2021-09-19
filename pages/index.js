@@ -25,7 +25,7 @@ export default function Home() {
   } else {
     return (
       <div style={{height: '100vh', backgroundColor: '#9390FF', textAlign: 'center'}}>
-        <h1 style={{margin: 0, fontSize: 60, fontWeight: 700, fontFamily: 'Quicksand'}}>Fhigure</h1>
+        <h1 style={{margin: 0, fontSize: 60, fontWeight: 700}}>Fhigure</h1>
         <LoginScreen setSession={(userData) => {
           setUserData(userData);
         }} />
