@@ -1,6 +1,7 @@
 import {useState} from 'react';
 
 import LoginScreen from '../components/LoginScreen'
+import MapScreen from '../components/MapScreen'
 
 export default function Home() {
   const [userData, setUserData] = useState();
@@ -9,7 +10,7 @@ export default function Home() {
     <>
       <h1>Scheduler</h1>
       {
-        userData ? 'Logged in' : 
+        userData ? <MapScreen /> : 
         <LoginScreen setSession={(userData) => {
           setUserData(userData);
         }} />
