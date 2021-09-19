@@ -1,6 +1,5 @@
-// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
-
 const pwds = {'1': 'a'}
+const userData = {'1': 'asdf'}
 
 export default function handler(req, res) {
   if (!req.body.userid || !req.body.pwd) {
@@ -8,7 +7,7 @@ export default function handler(req, res) {
     return;
   }
   if (pwds[req.body.userid] === req.body.pwd)
-    res.status(200).json({ok: 1});
+    res.status(200).json({ok: 1, userData: userData[req.body.userid]});
   else
     res.status(200).json({ok: 0});
 }
