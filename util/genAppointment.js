@@ -1,4 +1,4 @@
-export default (userId, userFullName, serviceCode, serviceDisplay) => {
+export default (userId, userFullName, dateCreated, serviceCode, serviceDisplay) => {
   return {
     "resourceType": "Appointment",
     "id": "examplereq",
@@ -63,7 +63,7 @@ export default (userId, userFullName, serviceCode, serviceDisplay) => {
         "reference": "Slot/example"
       }
     ],
-    "created": "2015-12-02",
+    "created": dateCreated,
     "comment": "Further expand on the results of the MRI and determine the next actions that may be appropriate.",
     "participant": [
       {
