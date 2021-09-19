@@ -66,7 +66,7 @@ export default function AppointmentScreen({userData}) {
                     </>
                 )
             }
-            <button className="button" onClick={() => setShowPersonalInfo(!showPersonalInfo)}>{showPersonalInfo ? 'Hide' : 'Show'} Personal Information</button>
+            <button className="button" styles={{background: 'white'}} onClick={() => setShowPersonalInfo(!showPersonalInfo)}>{showPersonalInfo ? 'Hide' : 'Show'} Personal Information</button>
             <br />
             { bookNow.length ? (
                 <>
