@@ -25,7 +25,7 @@ export default function Home() {
   } else {
     return (
       <>
-        <h1>Scheduler</h1>
+        <h1>Fhigure</h1>
         <LoginScreen setSession={(userData) => {
           setUserData(userData);
         }} />
