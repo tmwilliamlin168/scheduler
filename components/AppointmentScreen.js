@@ -35,7 +35,7 @@ export default function AppointmentScreen({userData}) {
     //     console.log(a.resource.created, (Date.now()-new Date(a.resource.created))/1000/60/60/24/365);
     // })
     return (
-        <>
+        <div style={{padding: 30}}>
             {
                 showPersonalInfo && (
                     <>
@@ -58,7 +58,7 @@ export default function AppointmentScreen({userData}) {
                     </>
                 )
             }
-            <button onClick={() => setShowPersonalInfo(!showPersonalInfo)}>{showPersonalInfo ? 'Hide' : 'Show'} Personal Information</button>
+            <button class="button" onClick={() => setShowPersonalInfo(!showPersonalInfo)}>{showPersonalInfo ? 'Hide' : 'Show'} Personal Information</button>
             <br />
             { bookNow.length ? (
                 <>
@@ -70,6 +70,6 @@ export default function AppointmentScreen({userData}) {
             { recentAppointments.length ? (
                 recentAppointments
             ) : 'You have no recent appointments' }
-        </>
+        </div>
     );
 }

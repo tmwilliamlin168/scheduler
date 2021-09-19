@@ -32,7 +32,7 @@ a {
   font-family: inherit;
   border-radius: 15px;
   margin: 5px;
-  padding: 5px;
+  padding: 5px 8px;
   border: none;
   font-weight: 600;
   font-size: 20px;
@@ -43,6 +43,7 @@ a {
   width: 226px;
 }
 
-.loginButton:hover {
+.button:hover {
   opacity: 0.9;
+  cursor: pointer;
 }
