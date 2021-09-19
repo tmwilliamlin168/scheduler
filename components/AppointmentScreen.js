@@ -62,11 +62,11 @@ export default function AppointmentScreen({userData}) {
             <br />
             { bookNow.length ? (
                 <>
-                    <h1>Book Now:</h1>
+                    <h1 style={{color: 'white'}}>Book Now:</h1>
                     {bookNow}
                 </>
             ) : 'Congrats! You are all caught up!' }
-            <h1>Recent Appointments:</h1>
+            <h1 style={{color: 'white'}}>Recent Appointments:</h1>
             { recentAppointments.length ? (
                 recentAppointments
             ) : 'You have no recent appointments' }
