@@ -15,21 +15,21 @@ export default function Home() {
     const firstName = offName.given[0];
     const lastName = offName.family;
     return (
-      <>
+      <div style={{height: '100vh', backgroundColor: '#9390FF'}}>
         Welcome, {namePref} {firstName} {lastName}
         <button onClick={() => setMapScreen(s => !s)}>Switch to {mapScreen ? 'Appointments' : 'Map'}</button>
         <br />
         { mapScreen ? <MapScreen /> : <AppointmentScreen userData={userData} /> }
-      </>
+      </div>
     )
   } else {
     return (
-      <>
-        <h1>Fhigure</h1>
+      <div style={{height: '100vh', backgroundColor: '#9390FF', textAlign: 'center'}}>
+        <h1 style={{margin: 0, fontSize: 60, fontWeight: 700, fontFamily: 'Quicksand'}}>Fhigure</h1>
         <LoginScreen setSession={(userData) => {
           setUserData(userData);
         }} />
-      </>
+      </div>
     )
   }
 }
