@@ -11,7 +11,7 @@ export default function Home() {
 
   if (userData) {
     const offName = userData.name.find(x => x.use === 'official');
-    const namePref = offName.prefix[0];
+    const namePref = offName.prefix && offName.prefix[0];
     const firstName = offName.given[0];
     const lastName = offName.family;
     return (

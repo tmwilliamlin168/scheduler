@@ -8,12 +8,14 @@ export default function AppointmentScreen({userData}) {
     const recentAppointments = [];
     apmtTypes.forEach(a => {
         let ca = null;
-        userData.apmts.entry.forEach(b => {
-            if (b.resource.serviceCategory[0].coding[0].code !== a.code)
-                return;
-            if (!ca || b.resource.created > ca.created)
-                ca = b.resource;
-        })
+        if(userData.apmts.entry) {
+            userData.apmts.entry.forEach(b => {
+                if (b.resource.serviceCategory[0].coding[0].code !== a.code)
+                    return;
+                if (!ca || b.resource.created > ca.created)
+                    ca = b.resource;
+            })
+        }
         if (!ca || Date.now()-new Date(ca.created) > 1000*60*60*24*365)
             bookNow.push(<div key={a.code} style={cardStyle}>{a.code} <a style={{color: 'blue'}} href={`mailto:${a.email}`} target="_window">Email</a></div>)
         else
