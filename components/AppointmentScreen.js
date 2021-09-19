@@ -2,9 +2,11 @@ import {useState} from 'react';
 
 const apmtTypes = [{code: 'checkup', email: 'checkup@fhirgure.com'}, {code: 'vision', email: 'vision@fhirgure.com'}, {code: 'dental', email: 'dental@fhirgure.com'}];
 
-const Card = ({children}) => {
+const Card = ({title, children}) => {
     return (
         <div style={{border: '2px solid', display: 'inline-block', margin: 8, backgroundColor: 'white', borderRadius: 15, border: 'none', padding: 20, width: 300, height: 150}}>
+            <span style={{textTransform: 'uppercase', fontWeight: 600, fontSize: 20}}>{title}</span>
+            <br />
             {children}
         </div>
     )
@@ -27,9 +29,9 @@ export default function AppointmentScreen({userData}) {
             })
         }
         if (!ca || Date.now()-new Date(ca.created) > 1000*60*60*24*365)
-            bookNow.push(<Card key={a.code}>{a.code} <a style={{color: 'blue'}} href={`mailto:${a.email}`} target="_window">Email</a></Card>)
+            bookNow.push(<Card key={a.code} title={a.code}><a style={{color: 'blue'}} href={`mailto:${a.email}`} target="_window">Email</a></Card>)
         else
-            recentAppointments.push(<Card key={a.code}>{a.code} {ca.created}</Card>)
+            recentAppointments.push(<Card key={a.code} title={a.code}>{ca.created}</Card>)
     });
     // userData.apmts.entry.forEach(a => {
     //     console.log(a.resource.created, (Date.now()-new Date(a.resource.created))/1000/60/60/24/365);
