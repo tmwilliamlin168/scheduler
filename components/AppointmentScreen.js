@@ -2,7 +2,13 @@ import {useState} from 'react';
 
 const apmtTypes = [{code: 'checkup', email: 'checkup@fhirgure.com'}, {code: 'vision', email: 'vision@fhirgure.com'}, {code: 'dental', email: 'dental@fhirgure.com'}];
 
-const cardStyle = {border: '2px solid', display: 'inline-block', margin: 4, padding: 4 };
+const Card = ({children}) => {
+    return (
+        <div style={{border: '2px solid', display: 'inline-block', margin: 8, backgroundColor: 'white', borderRadius: 15, border: 'none', padding: 20, width: 300, height: 150}}>
+            {children}
+        </div>
+    )
+};
 
 export default function AppointmentScreen({userData}) {
     const [showPersonalInfo, setShowPersonalInfo] = useState(false);
@@ -21,9 +27,9 @@ export default function AppointmentScreen({userData}) {
             })
         }
         if (!ca || Date.now()-new Date(ca.created) > 1000*60*60*24*365)
-            bookNow.push(<div key={a.code} style={cardStyle}>{a.code} <a style={{color: 'blue'}} href={`mailto:${a.email}`} target="_window">Email</a></div>)
+            bookNow.push(<Card key={a.code}>{a.code} <a style={{color: 'blue'}} href={`mailto:${a.email}`} target="_window">Email</a></Card>)
         else
-            recentAppointments.push(<div key={a.code} style={cardStyle}>{a.code} {ca.created}</div>)
+            recentAppointments.push(<Card key={a.code}>{a.code} {ca.created}</Card>)
     });
     // userData.apmts.entry.forEach(a => {
     //     console.log(a.resource.created, (Date.now()-new Date(a.resource.created))/1000/60/60/24/365);
