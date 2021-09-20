@@ -1,3 +1,22 @@
+# Fhirgure
+### Go Figure
+
+Fhirgure helps neurodiverse employees at self-insured firms book appointments with one click. Appointment booking - including protracted phone calls, long email chains, and general bureaucratic and social hassle - is a major barrier to neurodiverse patients, preventing them from getting the care they need. Yet, many of them work at self-insured firms, which have access to their employees' health records. Fhirgure reads employee health records to give appointment reminders and email providers the relevant information, booking appointments with one click.
+
+## Check it out at:
+https://fhigure.vercel.app/
+
+#### Our Wireframing:
+https://www.figma.com/file/N7ybUfkKC2FUGZwQpsSftv/appt-scheduler?node-id=0%3A1
+
+## Enterprise User
+Employers are part of the US healthcare access in a substantial way. Thus, we also empower employers to factor data-driven insights into their business decisions towards supporting their employees' healthcare.
+
+#### Enterprise User View Only:
+https://arcg.is/1un1uX
+
+---
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
