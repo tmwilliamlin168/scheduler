@@ -15,6 +15,10 @@ Employers are part of the US healthcare access in a substantial way. Thus, we al
 #### Enterprise User View Only:
 https://arcg.is/1un1uX
 
+
+##### Posted to InterSystems OpenExchange
+https://openexchange.intersystems.com/package/Fhirgure
+
 ---
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
