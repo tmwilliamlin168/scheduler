@@ -6,6 +6,8 @@ Fhirgure helps neurodiverse employees at self-insured firms book appointments wi
 ## Check it out at:
 https://fhigure.vercel.app/
 
+Login with demo user: "15470" and password: "password"
+
 #### Our Wireframing:
 https://www.figma.com/file/N7ybUfkKC2FUGZwQpsSftv/appt-scheduler?node-id=0%3A1
 
